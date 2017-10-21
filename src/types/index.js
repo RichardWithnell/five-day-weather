@@ -1,9 +1,14 @@
 /* @flow */
 
+export type Wind = {
+  speed: number,
+  direction: number
+}
+
 export type WeatherRow = {
   time: Date,
   temp: number,
-  windSpeed: number,
+  wind: Wind,
   image: string,
   description: string
 }
