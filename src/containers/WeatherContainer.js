@@ -49,7 +49,7 @@ class WeatherContainer extends Component<Props, State> {
       return (
         <Layout
           city={city}
-          country={country}
+          country={country.toUpperCase()}
           lastUpdated={lastUpdated}
           weather={byId}
           days={allIds.sort().reverse()}
