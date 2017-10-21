@@ -2,15 +2,9 @@
 
 import React from 'react'
 
-type Props = {
-  time: string,
-  temp: number,
-  windSpeed: number,
-  image: string,
-  description: string
-}
+import type { WeatherRow } from '../../types'
 
-class Row extends React.PureComponent<Props> {
+class Row extends React.PureComponent<WeatherRow> {
   static defaultProps = {
     time: '',
     temp: 0.0,
@@ -23,7 +17,7 @@ class Row extends React.PureComponent<Props> {
     let { time, temp, windSpeed, image, description } = this.props
     return (
       <div>
-        {`${time.toString()} - ${temp} - ${windSpeed} - `}{' '}
+        {`${time.toString()} - ${temp} °C - ${windSpeed} mph - `}{' '}
         <img src={image} alt={description} />
       </div>
     )

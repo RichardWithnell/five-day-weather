@@ -3,12 +3,9 @@
 import React from 'react'
 import Row from './Row'
 
-type Props = {
-  day: string,
-  data: Array<Object>
-}
+import type { WeatherDay } from '../../types'
 
-class Day extends React.PureComponent<Props> {
+class Day extends React.PureComponent<WeatherDay> {
   static defaultProps = {
     day: '',
     data: []

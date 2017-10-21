@@ -4,14 +4,9 @@ import React from 'react'
 
 import Day from './Day'
 
-type Props = {
-  city: string,
-  country: string,
-  weather: Object,
-  lastUpdated: Date | null
-}
+import type { WeatherData } from '../../types'
 
-class Layout extends React.PureComponent<Props> {
+class Layout extends React.PureComponent<WeatherData> {
   static defaultProps = {
     city: '',
     country: '',
