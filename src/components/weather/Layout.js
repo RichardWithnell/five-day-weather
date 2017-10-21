@@ -19,9 +19,10 @@ class Layout extends React.PureComponent<WeatherData> {
       <div>
         <h2>{`${city}, ${country}`}</h2>
         <h6>{lastUpdated !== null ? lastUpdated.toString() : 'Never'}</h6>
-        {Object.keys(weather).map(day => (
-          <Day key={day} day={day} data={weather[day]} />
-        ))}
+        {Object.keys(weather)
+          .sort()
+          .reverse()
+          .map(day => <Day key={day} day={day} data={weather[day]} />)}
       </div>
     )
   }
