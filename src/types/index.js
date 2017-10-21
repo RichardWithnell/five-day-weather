@@ -22,5 +22,6 @@ export type WeatherData = {
   city: string,
   country: string,
   weather: Object,
+  days: Array<string>,
   lastUpdated: Date | null
 }

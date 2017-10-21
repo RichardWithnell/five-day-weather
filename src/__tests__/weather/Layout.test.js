@@ -23,6 +23,13 @@ describe('Test Layout Component', () => {
     lastUpdated: new Date(),
     country: 'UK',
     city: 'London',
+    days: [
+      '2017-01-01',
+      '2017-02-01',
+      '2017-03-01',
+      '2017-04-01',
+      '2017-05-01'
+    ],
     weather: {
       '2017-01-01': [],
       '2017-02-01': [],

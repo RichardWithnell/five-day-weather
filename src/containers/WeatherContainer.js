@@ -22,13 +22,20 @@ class WeatherContainer extends Component<Props, State> {
   }
 
   render () {
-    return <Layout />
+    return (
+      <Layout
+        city={this.props.weather.city}
+        country={this.props.weather.country}
+        lastUpdated={this.props.weather.lastUpdated}
+        weather={this.props.weather.byId}
+        days={this.props.weather.allIds}
+      />
+    )
   }
 }
 
 const mapStateToProps = state => {
   const { weather } = state
-
   return {
     weather
   }
