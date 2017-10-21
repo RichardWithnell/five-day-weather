@@ -14,7 +14,7 @@ const API_KEY = process.env.REACT_APP_OPEN_WEATHER_API_KEY || ''
 
 console.log(process.env)
 
-const API = `http://api.openweathermap.org/data/2.5/forecast?APPID=${API_KEY}`
+const API = `https://api.openweathermap.org/data/2.5/forecast?APPID=${API_KEY}`
 
 export function invalidateWeather () {
   return (dispatch: Function) => dispatch({ type: INVALIDATE_WEATHER })
