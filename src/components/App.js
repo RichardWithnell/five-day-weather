@@ -4,64 +4,39 @@ import React from 'react'
 
 import { Layout } from './weather'
 
+import data from '../data/weather.json'
+
+import { format } from 'date-fns'
+
+export const reduceWeather = (data: Object): Object => {
+  return data.list.reduce((acc, w) => {
+    const bucket = format(new Date(w.dt_txt), 'DD/MM/YYYY')
+    if (!(bucket in acc)) {
+      acc[bucket] = []
+    }
+    acc[bucket].push({
+      time: format(new Date(w.dt_txt), 'HH:mm'),
+      temp: w.main.temp,
+      wind: w.wind,
+      description: w.weather[0].description,
+      image: `http://openweathermap.org/img/w/${w.weather[0].icon}.png`
+    })
+    return acc
+  }, {})
+}
+
 const App = () => {
-  let data = {
-    '01/01/2017': [
-      {
-        time: new Date('2017-01-01T12:00:00'),
-        temp: 10.0,
-        windSpeed: 3.0,
-        image: '',
-        description: 'rain'
-      },
-      {
-        time: new Date('2017-01-01T13:00:00'),
-        temp: 15.0,
-        windSpeed: 2.0,
-        image: '',
-        description: 'rain'
-      },
-      {
-        time: new Date('2017-01-01T14:00:00'),
-        temp: 8.0,
-        windSpeed: 1.0,
-        image: '',
-        description: 'rain'
-      }
-    ],
-    '01/02/2017': [
-      {
-        time: new Date('2017-02-01T12:00:00'),
-        temp: 10.0,
-        windSpeed: 3.0,
-        image: '',
-        description: 'sun'
-      },
-      {
-        time: new Date('2017-02-01T13:00:00'),
-        temp: 15.0,
-        windSpeed: 2.0,
-        image: '',
-        description: 'sun'
-      },
-      {
-        time: new Date('2017-02-01T14:00:00'),
-        temp: 8.0,
-        windSpeed: 1.0,
-        image: '',
-        description: 'cloud'
-      }
-    ]
-  }
+  let city = data.city.name
+  let country = data.city.country
 
   return (
     <div>
       <h1>Five Day Weather</h1>
       <Layout
         lastUpdated={new Date()}
-        country={'UK'}
-        city={'London'}
-        weather={data}
+        country={country}
+        city={city}
+        weather={reduceWeather(data)}
       />
     </div>
   )
