@@ -6,7 +6,7 @@ export type Wind = {
 }
 
 export type WeatherRow = {
-  time: Date,
+  time: string,
   temp: number,
   wind: Wind,
   image: string,
