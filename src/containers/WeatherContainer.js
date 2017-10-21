@@ -52,7 +52,7 @@ class WeatherContainer extends Component<Props, State> {
           country={country}
           lastUpdated={lastUpdated}
           weather={byId}
-          days={allIds}
+          days={allIds.sort().reverse()}
         />
       )
     }

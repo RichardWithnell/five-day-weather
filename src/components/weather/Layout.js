@@ -26,14 +26,11 @@ class Layout extends React.PureComponent<WeatherData> {
           <h5 style={{ textAlign: 'center' }}>Last Updated: {updateString}</h5>
         </Row>
         <Row>
-          {days
-            .sort()
-            .reverse()
-            .map(d => (
-              <Col xs={12} sm={6} md={4} lg={3} key={d}>
-                <Day day={d} data={weather[d]} />
-              </Col>
-            ))}
+          {days.map(d => (
+            <Col xs={12} sm={6} md={4} lg={3} key={d}>
+              <Day day={d} data={weather[d]} />
+            </Col>
+          ))}
         </Row>
       </Grid>
     )
