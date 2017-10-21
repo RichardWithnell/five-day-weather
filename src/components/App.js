@@ -6,7 +6,7 @@ import { Layout } from './weather'
 
 import data from '../data/weather.json'
 
-import reduceWeather from '../util'
+import { reduceWeather } from '../util'
 
 const App = () => {
   let city = data.city.name
