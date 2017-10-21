@@ -16,10 +16,18 @@ class Row extends React.PureComponent<WeatherRow> {
   render () {
     let { time, temp, wind, image, description } = this.props
     return (
-      <div>
-        {`${time.toString()} - ${temp} °C - ${wind.speed} mph - `}{' '}
-        <img src={image} alt={description} />
-      </div>
+      <tr>
+        <td>{`${time}`}</td>
+        <td>{`${temp} °C`}</td>
+        <td>{`${wind.speed}  MPH`}</td>
+        <td>
+          <img
+            style={{ width: '24px', height: '24px' }}
+            alt={description}
+            src={image}
+          />
+        </td>
+      </tr>
     )
   }
 }
