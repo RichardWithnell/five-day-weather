@@ -1,6 +1,6 @@
 /* @flow */
 
-import reduceWeather from '../util'
+import { reduceWeather } from '../util'
 import data from '../data/weather.json'
 
 export const INVALIDATE_WEATHER = 'INVALIDATE_WEATHER'
