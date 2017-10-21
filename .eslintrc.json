@@ -3,11 +3,16 @@
     "es6": true,
     "browser": true
   },
-  "extends": [ "react-app", "standard", "standard-react" ],
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended",
+    "standard",
+    "standard-react"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
-      "ecmaVersion": 2016,      
+      "ecmaVersion": 2016,
       "jsx": true
     }
   },
@@ -16,5 +21,5 @@
     "react/react-in-jsx-scope": 1,
     "react/prop-types": 0 // Use flow for compile time validation, instead of react run time validation
   },
-  "plugins": ["react", "flowtype", "jest"]
+  "plugins": ["react", "flowtype", "jest", "jsx-a11y"]
 }
