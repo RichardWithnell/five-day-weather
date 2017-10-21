@@ -4,6 +4,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+[Demo](https://richardwithnell.github.io/five-day-weather/).
+
 ## Description
 
 A single page HTML app to display the last five days of data provided by the OpenWeatherMap API.
