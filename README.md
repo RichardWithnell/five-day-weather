@@ -22,16 +22,30 @@ A single page HTML app to display the last five days of data provided by the Ope
 
 ## Setup
 
-### Using npm or Yarn
-
 ```bash
 npm install # npm
 yarn # Yarn
 ```
 
-## Development
+## Dev Server
+
+```bash
+npm run start # npm
+yarn start # Yarn
+```
 
 ## Test
 
+```bash
+npm run test # npm
+yarn test # Yarn
+```
+
 ## Build
+
+```bash
+npm run build # npm
+yarn build # Yarn
+```
+
 
