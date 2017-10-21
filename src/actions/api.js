@@ -8,6 +8,9 @@ export const FETCH_WEATHER = 'FETCH_WEATHER'
 export const FETCH_WEATHER_FULFILLED = 'FETCH_WEATHER_FULFILLED'
 export const FETCH_WEATHER_REJECTED = 'FETCH_WEATHER_REJECTED'
 
+export const DEFAULT_CITY = 'London'
+export const DEFAULT_COUNTRY = 'UK'
+
 export function invalidateWeather () {
   return (dispatch: Function) => dispatch({ type: INVALIDATE_WEATHER })
 }
