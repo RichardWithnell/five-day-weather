@@ -1,0 +1,5 @@
+{
+  "presets": ["env", "react-app", "flow"],
+  "plugins": ["babel-plugin-transform-flow-strip-types"],
+  "retainLines": true
+}
