@@ -54,7 +54,8 @@ set REACT_APP_OPEN_WEATHER_API_KEY='Insert your API key here' && npm start
 REACT_APP_OPEN_WEATHER_API_KEY='Insert your API key here' && npm start
 ```
 
-Startup the development server. The app will automatically open with hot reloading at <http://localhost:3000>.
+Startup the development server, the app will automatically open at <http://localhost:3000>.
+
 
 ```bash
 yarn start
@@ -85,17 +86,22 @@ yarn deploy
 ```
 
 ## Additional Work
+Given more time there are a number of additional features that could be added to improve the user experience, development process, and deployment.
+
 
 ### Features
 
-- Allow a user to select the city/country using a typeahead and a location API.
+- Allow a user to select the city/country, using a typeahead and a location API.
+
 - Add a refresh button to reload the data, without refreshing the page.
 - Show an overview of weather data for each day.
-- Use ``Geolocation.getCurrentPosition()`` to get the weather for the users location by default.
+- Use ``Geolocation.getCurrentPosition()`` to show the weather for the users current location by default.
+
 
 ### Testing
 
-- Increase test coverage (especially for redux: container, reducer, and actions).
+- Increase test coverage (especially for redux: containers, reducers, and actions).
+
 - Add cross browser testing using Selenium.
 - Utilise BDD tools (e.g. cucumber) to take each user story and ensure the associated tests pass. 
 
@@ -106,5 +112,5 @@ yarn deploy
 
 ### CI/CD
 - Currently just using travis to run tests on push, should report coverage to the repository as well. 
-- Automate deployment when CI passes.
+- Automate deployment of the master branch when the CI stage passes.
 
